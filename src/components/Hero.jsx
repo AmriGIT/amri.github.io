@@ -22,7 +22,7 @@ const Hero = () => {
               animate="visible"
               className="pb-16 text font-thin tracking-tight lg:mt-16 lg:text-8xl"
             >
-            Amri Fathoni
+            Rahmat Amri Fathoni
             </motion.h1>
             <motion.span
               variants={container(0.5)}

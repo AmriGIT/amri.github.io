@@ -1,5 +1,6 @@
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
+
 const Projects = () => {
   return (
     <div className="border-b border-neutral-900 pb-4">
@@ -21,11 +22,11 @@ const Projects = () => {
               className="w-full lg:w-1/4"
             >
               <img
-                src={project.image}
+                src={project.image || "https://via.placeholder.com/150?text=Project+Image"}
                 width={150}
                 height={150}
                 alt={project.title}
-                className="mb-6 rounded"
+                className="mb-6 rounded object-cover"
               />
             </motion.div>
             <motion.div
@@ -34,16 +35,26 @@ const Projects = () => {
               transition={{ duration: 1 }}
               className="w-full max-w-xl lg:w-3/4"
             >
-              <h6 className="mb-2 font-semibold">{project.title}</h6>
+              <h6 className="mb-2 text-2xl font-semibold">{project.title}</h6>
               <p className="mb-4 text-neutral-400">{project.description}</p>
-              {project.technologies.map((tech, index) => (
-                <span
-                  key={index}
-                  className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900"
-                >
-                  {tech}
-                </span>
-              ))}
+              
+              {/* Link sebagai informasi teks saja jika ada */}
+              {project.link && (
+                <p className="mb-4 text-sm text-neutral-500">
+                  Live Demo: <span className="font-medium">{project.link}</span>
+                </p>
+              )}
+              
+              <div className="flex flex-wrap gap-2">
+                {project.technologies.map((tech, techIndex) => (
+                  <span
+                    key={techIndex}
+                    className="rounded bg-neutral-900 px-3 py-1 text-sm font-medium text-purple-500"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </motion.div>
           </div>
         ))}
