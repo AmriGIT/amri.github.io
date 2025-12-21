@@ -96,6 +96,6 @@ export const PROJECTS = [
 
 export const CONTACT = {
   address: "Sukoharjo Makmur",
-  phoneNo: "085-728-131-407",
+  phoneNo: "087887661979",
   email: "rahmatamri123@gmail.com",
 };
