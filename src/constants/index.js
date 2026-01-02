@@ -27,7 +27,7 @@ export const EXPERIENCES = [
   {
     year: "2023 - Present",
     role: "Software Engineer (Backend Focus)",
-    company: "PT Bank Multiartha Sentosa (Sinarmas Group)",
+    company: "PT Sinarmas Multiartha TBK - Danasaham",
     description: "Merancang, mengembangkan, dan mengoptimasi fitur RESTful API serta layanan integrasi API eksternal untuk sistem perbankan. Bekerja dengan arsitektur microservices menggunakan Spring Cloud, Eureka, dan Kafka untuk handling event-driven. Mengelola database hybrid (MongoDB & PostgreSQL), caching dengan Redis, serta implementasi security dan CI/CD pipeline.",
     technologies: ["Java", "Spring Boot", "Spring Cloud", "Spring Security", "Kafka", "Redis", "MongoDB", "PostgreSQL", "Jenkins", "Git", "Docker"],
   },
