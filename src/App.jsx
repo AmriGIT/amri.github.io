@@ -9,11 +9,9 @@ import Contact from "./components/Contact";
 
 const App = () => {
   return (
-    <div className="overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-cyan-900">
-      <div className="fixed top-0 -z-10 h-full w-full">
-        <div className="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
-      </div>
-      <div className="container mx-auto px-8">
+    <div className="relative min-h-screen overflow-x-hidden bg-slate-950 text-neutral-100 antialiased selection:bg-cyan-300 selection:text-slate-950">
+      <div className="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(14,165,233,0.18),_transparent_30%),radial-gradient(circle_at_20%_20%,_rgba(168,85,247,0.14),_transparent_25%),#020617]"></div>
+      <div className="mx-auto max-w-7xl px-6 py-6 lg:px-8">
         <Navbar />
         <Hero />
         <About />

@@ -1,53 +1,50 @@
 import { EXPERIENCES } from "../constants";
 import { motion } from "framer-motion";
+
 const Experience = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4">
-      <motion.h1
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
-        className="my-20 text-center text-4xl"
-      >
-        Experience
-      </motion.h1>
-      <div>
-        {EXPERIENCES.map((experience, index) => (
-          <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
+    <section id="experience" className="border-b border-white/10 pb-24 pt-20">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="mb-12 text-center">
+          <p className="text-sm uppercase tracking-[0.35em] text-cyan-300">Career journey</p>
+          <h2 className="mt-4 text-4xl font-semibold tracking-tight text-white">Experience</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-slate-400">
+            Roles and responsibilities I have taken while building reliable systems for production.
+          </p>
+        </div>
+
+        <div className="space-y-6">
+          {EXPERIENCES.map((experience, index) => (
             <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -100 }}
-              transition={{ duration: 1 }}
-              className="w-full lg:w-1/4"
+              key={index}
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 40 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              className="rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 shadow-2xl shadow-cyan-500/10"
             >
-              <p className="mb-2 text-sm text-neutral-400">{experience.year}</p>
+              <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+                <div>
+                  <p className="text-sm uppercase tracking-[0.35em] text-cyan-300">{experience.year}</p>
+                  <h3 className="mt-4 text-2xl font-semibold text-white">{experience.role}</h3>
+                  <p className="mt-2 text-sm text-slate-400">{experience.company}</p>
+                </div>
+              </div>
+              <p className="mt-6 text-base leading-7 text-slate-300">{experience.description}</p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {experience.technologies.map((tech, techIndex) => (
+                  <span
+                    key={techIndex}
+                    className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-slate-300"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </motion.div>
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 100 }}
-              transition={{ duration: 1 }}
-              className="w-full max-w-xl lg:w-3/4 "
-            >
-              <h6 className="mb-2 font-semibold">
-                {experience.role} -{" "}
-                <span className="text-sm text-purple-100">
-                  {experience.company}
-                </span>
-              </h6>
-              <p className="mb-4 text-neutral-400">{experience.description}</p>
-              {experience.technologies.map((tech, index) => (
-                <span
-                  key={index}
-                  className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800"
-                >
-                  {tech}
-                </span>
-              ))}
-            </motion.div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

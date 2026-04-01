@@ -2,6 +2,7 @@ import project1 from "../assets/projects/project-1.png";
 import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
+import project5 from "../assets/projects/project-5.png";
 
 export const HERO_CONTENT = `I am a dedicated Backend Java Developer specializing in Spring Boot, with 3 years of professional experience building scalable and secure backend systems. I excel in designing RESTful APIs, microservices, database optimization, and integrating with various databases like MySQL, PostgreSQL, and MongoDB.
 Additionally, with 5 years of frontend experience using technologies such as React, HTML/CSS/JavaScript, I bring full-stack capabilities to deliver end-to-end solutions that ensure seamless user experiences.
@@ -11,7 +12,7 @@ export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer w
 
 export const EXPERIENCES = [
   {
-    year: "2025 - Present",
+    year: "2025 (Oct - Dec)",
     role: "Full-Stack Developer (Freelance)",
     company: "Yayasan Manbatul Ulama",
     description: "Mengembangkan landing page dan sistem informasi yayasan dari awal, mencakup frontend responsif serta backend management data. Bertanggung jawab atas desain UI/UX, pengelolaan konten, fitur administrasi, dan integrasi database untuk kebutuhan operasional yayasan.",
@@ -40,7 +41,7 @@ export const EXPERIENCES = [
   },
   {
     year: "2016 - 2022",
-    role: "Staff Tata Usaha & IT Support",
+    role: "Fullstack Developer",
     company: "MAN Sukoharjo, Jawa Tengah",
     description: "Mengembangkan sistem informasi berbasis web untuk madrasah, termasuk sistem informasi madrasah, PPDB online, dan sistem korespondensi digital menggunakan PHP CodeIgniter. Mengelola hosting, domain, maintenance website sekolah (WordPress), serta administrasi dokumen dan website.",
     technologies: ["PHP", "CodeIgniter", "MySQL", "WordPress", "HTML", "CSS", "JavaScript"],
@@ -79,7 +80,7 @@ export const PROJECTS = [
   },
   {
     title: "Sistem Informasi Yayasan Manbatul Ulama",
-    image: project3,
+    image: project5,
     description:
       "Full-stack development untuk website resmi yayasan: landing page modern, sistem manajemen informasi (program, donasi, kegiatan), dashboard admin, dan integrasi database.",
     technologies: ["React.js", "Tailwind CSS", "Laravel", "MySQL"],
