@@ -1,22 +1,9 @@
-import { RiReactjsLine } from "react-icons/ri";
-import { SiMongodb, SiSpringboot, SiDocker, SiKubernetes } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa";
-import { DiRedis, DiJava } from "react-icons/di";
 import { BiLogoPostgresql } from "react-icons/bi";
+import { DiJava, DiRedis } from "react-icons/di";
+import { FaNodeJs, FaServer } from "react-icons/fa";
+import { RiReactjsLine } from "react-icons/ri";
+import { SiDocker, SiKubernetes, SiMongodb, SiSpringboot } from "react-icons/si";
 import { motion } from "framer-motion";
-
-const iconVariants = (duration) => ({
-  initial: { y: -10 },
-  animate: {
-    y: [10, -10],
-    transition: {
-      duration,
-      ease: "linear",
-      repeat: Infinity,
-      repeatType: "reverse",
-    },
-  },
-});
 
 const technologies = [
   {
@@ -64,38 +51,38 @@ const technologies = [
     icon: <SiKubernetes className="text-6xl text-sky-400" />,
     description: "Orchestration & scaling",
   },
+  {
+    label: "cPanel & Hosting",
+    icon: <FaServer className="text-6xl text-amber-400" />,
+    description: "Domain, subdomain, web/API deploy",
+  },
 ];
 
 const Technologies = () => {
   return (
-    <section id="technologies" className="border-b border-white/10 pb-24 pt-20">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-12 text-center">
-          <p className="text-sm uppercase tracking-[0.35em] text-cyan-300">What I use</p>
-          <h2 className="mt-4 text-4xl font-semibold tracking-tight text-white">Technologies</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-slate-400">
+    <section id="technologies" className="border-t border-white/10 py-20">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-10 max-w-3xl">
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-emerald-200">What I use</p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">Technologies</h2>
+          <p className="mt-4 text-base leading-8 text-zinc-400">
             Tools and frameworks that power the applications I build, from backend architecture to polished user interfaces.
           </p>
         </div>
 
-        <motion.div
-          whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 40 }}
-          transition={{ duration: 0.8 }}
-          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
-        >
+        <motion.div whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 40 }} transition={{ duration: 0.8 }} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {technologies.map((item) => (
             <motion.div
               key={item.label}
-              whileHover={{ y: -6 }}
-              className="space-y-4 rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 text-center shadow-2xl shadow-cyan-500/10 transition"
+              whileHover={{ y: -4 }}
+              className="group flex items-center gap-5 rounded-lg border border-white/10 bg-white/[0.04] p-5 shadow-xl shadow-black/20 transition hover:border-emerald-300/30 hover:bg-white/[0.06]"
             >
-              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl bg-white/5">
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg bg-zinc-950/60 transition group-hover:scale-105">
                 {item.icon}
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-white">{item.label}</h3>
-                <p className="mt-2 text-sm text-slate-400">{item.description}</p>
+                <p className="mt-2 text-sm leading-6 text-zinc-400">{item.description}</p>
               </div>
             </motion.div>
           ))}

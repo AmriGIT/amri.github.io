@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proposal Penawaran Jasa Digital - Rahmat Amri Fathoni</title>
+    <style>
+      :root {
+        --text: #1f2933;
+        --muted: #5f6b7a;
+        --line: #d9dee7;
+        --soft: #f7f8fa;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #ffffff;
+        color: var(--text);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        background: var(--white);
+        padding: 18mm;
+      }
+
+      .header {
+        display: grid;
+        grid-template-columns: 78px 1fr;
+        gap: 16px;
+        align-items: center;
+        border-bottom: 2px solid var(--text);
+        padding-bottom: 18px;
+      }
+
+      .logo {
+        width: 72px;
+        height: 72px;
+        object-fit: contain;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 8px;
+        font-size: 28px;
+        line-height: 1.2;
+      }
+
+      h2 {
+        margin: 28px 0 10px;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 6px;
+        font-size: 18px;
+      }
+
+      h3 {
+        margin-bottom: 6px;
+        font-size: 15px;
+      }
+
+      .subtitle,
+      .lead,
+      .footer {
+        color: var(--muted);
+      }
+
+      .subtitle {
+        margin-bottom: 0;
+        font-size: 14px;
+      }
+
+      .meta {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .meta div,
+      .card,
+      .panel,
+      .contact div {
+        border: 1px solid var(--line);
+        background: var(--white);
+        padding: 12px;
+      }
+
+      small {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .grid {
+        display: grid;
+        gap: 12px;
+      }
+
+      .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      ul {
+        margin: 8px 0 0;
+        padding-left: 18px;
+      }
+
+      li {
+        margin-bottom: 5px;
+      }
+
+      .panel {
+        background: var(--soft);
+      }
+
+      .highlight {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 12px;
+        margin-top: 14px;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .chip {
+        border: 1px solid var(--line);
+        background: var(--soft);
+        padding: 5px 9px;
+        font-size: 12px;
+      }
+
+      .steps {
+        counter-reset: step;
+      }
+
+      .step {
+        counter-increment: step;
+        display: grid;
+        grid-template-columns: 30px 1fr;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
+      .step::before {
+        content: counter(step);
+        display: grid;
+        place-items: center;
+        width: 30px;
+        height: 30px;
+        border: 1px solid var(--text);
+        font-weight: 700;
+      }
+
+      .contact {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .contact strong {
+        display: block;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+
+      .footer {
+        margin-top: 24px;
+        border-top: 1px solid var(--line);
+        padding-top: 12px;
+        font-size: 12px;
+        text-align: center;
+      }
+
+      @media print {
+        body {
+          background: #ffffff;
+        }
+
+        .page {
+          width: auto;
+          min-height: auto;
+          padding: 14mm;
+        }
+
+        .card,
+        .panel,
+        .contact div {
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <img class="logo" src="src/assets/logo-me.png" alt="Logo Rahmat Amri Fathoni" />
+        <div>
+          <h1>Proposal Penawaran Jasa Digital</h1>
+          <p class="subtitle">
+            Pengembangan website, sistem bisnis, aplikasi mobile, backend API, integrasi data, dan deployment.
+          </p>
+        </div>
+      </header>
+
+      <section class="meta">
+        <div>
+          <small>Nama</small>
+          <strong>Rahmat Amri Fathoni</strong>
+        </div>
+        <div>
+          <small>Bidang</small>
+          Backend & Full-Stack Developer
+        </div>
+        <div>
+          <small>Email</small>
+          rahmatamri123@gmail.com
+        </div>
+        <div>
+          <small>Portofolio</small>
+          www.raf.web.id
+        </div>
+      </section>
+
+      <section>
+        <h2>Ringkasan</h2>
+        <p class="lead">
+          Saya membantu client membangun solusi digital yang rapi, mudah digunakan, dan siap dikembangkan. Layanan mencakup pembuatan website, dashboard admin, backend API, aplikasi mobile, integrasi data, automation, serta deployment ke hosting/server.
+        </p>
+      </section>
+
+      <section>
+        <h2>Layanan yang Ditawarkan</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <small>Website</small>
+            <h3>Landing Page / Company Profile</h3>
+            <p>Website untuk memperkenalkan brand, layanan, produk, program, dan kontak bisnis secara profesional.</p>
+          </div>
+          <div class="card">
+            <small>Dashboard</small>
+            <h3>Sistem Informasi dan Admin Panel</h3>
+            <p>Dashboard untuk mengelola data customer, supplier, produk, transaksi, laporan, konten, dan user internal.</p>
+          </div>
+          <div class="card">
+            <small>API</small>
+            <h3>Backend API untuk Web dan Mobile</h3>
+            <p>REST API menggunakan Java Spring Boot atau Laravel 12, lengkap dengan autentikasi, validasi, dan struktur service yang rapi.</p>
+          </div>
+          <div class="card">
+            <small>Mobile</small>
+            <h3>Aplikasi Mobile React Native</h3>
+            <p>Aplikasi mobile berbasis React Native dan TypeScript untuk kebutuhan operasional, marketing, customer service, dan internal team.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Keunggulan untuk Client</h2>
+        <div class="highlight">
+          <div class="panel">
+            <ul>
+              <li>Alur kerja disesuaikan dengan kebutuhan bisnis client.</li>
+              <li>Desain responsif dan mudah digunakan di desktop maupun mobile.</li>
+              <li>Backend API dibuat dengan struktur yang mudah dirawat.</li>
+              <li>Deployment dibantu sampai website/API dapat digunakan.</li>
+              <li>Dapat dilanjutkan dengan maintenance dan pengembangan fitur bertahap.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Paket Fleksibel</h3>
+            <p>Client dapat memulai dari scope kecil seperti landing page, lalu berkembang ke dashboard admin, API, mobile app, atau automation sesuai kebutuhan.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Teknologi yang Digunakan</h2>
+        <div class="chips">
+          <span class="chip">Java Spring Boot</span>
+          <span class="chip">Laravel 12 API</span>
+          <span class="chip">PHP CI4 HMVC</span>
+          <span class="chip">React.js Vite</span>
+          <span class="chip">Tailwind CSS</span>
+          <span class="chip">React Native</span>
+          <span class="chip">TypeScript</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">MongoDB</span>
+          <span class="chip">Redis</span>
+          <span class="chip">Docker</span>
+          <span class="chip">cPanel & Hosting</span>
+          <span class="chip">Cronjob Automation</span>
+          <span class="chip">API Integration</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Pilihan Paket Jasa</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <small>Starter</small>
+            <h3>Website Profil</h3>
+            <ul>
+              <li>Landing page/company profile</li>
+              <li>Responsive design</li>
+              <li>Deploy hosting/cPanel</li>
+            </ul>
+          </div>
+          <div class="card">
+            <small>Business</small>
+            <h3>Web System</h3>
+            <ul>
+              <li>Dashboard admin</li>
+              <li>Database dan CRUD</li>
+              <li>Login dan role user</li>
+            </ul>
+          </div>
+          <div class="card">
+            <small>Custom</small>
+            <h3>API / Mobile App</h3>
+            <ul>
+              <li>Backend API</li>
+              <li>React Native app</li>
+              <li>Integrasi dan automation</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Alur Kerja</h2>
+        <div class="steps">
+          <div class="step">
+            <div>
+              <h3>Konsultasi Kebutuhan</h3>
+              <p>Diskusi target bisnis, fitur utama, user, data, referensi desain, dan deadline.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h3>Rencana Scope dan Estimasi</h3>
+              <p>Menyusun fitur, teknologi, timeline, dan estimasi biaya sebelum development dimulai.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h3>Development dan Review</h3>
+              <p>Pengerjaan bertahap dengan preview hasil agar client dapat memberi feedback lebih cepat.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h3>Deploy dan Serah Terima</h3>
+              <p>Website/API/mobile app disiapkan untuk digunakan, termasuk bantuan hosting, domain, dan dokumentasi sederhana.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Kontak</h2>
+        <p>Saya siap membantu membuat solusi digital yang sesuai kebutuhan client, baik untuk marketing, operasional, sistem internal, maupun integrasi aplikasi.</p>
+        <div class="contact">
+          <div>
+            <small>Email</small>
+            <strong>rahmatamri123@gmail.com</strong>
+          </div>
+          <div>
+            <small>Telepon / WhatsApp</small>
+            <strong>087887661979</strong>
+          </div>
+          <div>
+            <small>Lokasi</small>
+            <strong>Sukoharjo</strong>
+          </div>
+          <div>
+            <small>Portofolio</small>
+            <strong>www.raf.web.id</strong>
+          </div>
+        </div>
+      </section>
+
+      <p class="footer">
+        Proposal ini dapat disesuaikan kembali berdasarkan kebutuhan fitur, timeline, dan prioritas bisnis client.
+      </p>
+    </main>
+  </body>
+</html>

@@ -3,14 +3,30 @@ import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
 import project5 from "../assets/projects/project-5.png";
+import project6 from "../assets/projects/project-6.png";
+import project7 from "../assets/projects/project-7.png";
 
-export const HERO_CONTENT = `I am a dedicated Backend Java Developer specializing in Spring Boot, with 3 years of professional experience building scalable and secure backend systems. I excel in designing RESTful APIs, microservices, database optimization, and integrating with various databases like MySQL, PostgreSQL, and MongoDB.
+export const HERO_CONTENT = `I am a dedicated Backend Java Developer specializing in Spring Boot, with {{BACKEND_EXPERIENCE}} of professional experience building scalable and secure backend systems. I excel in designing RESTful APIs, microservices, database optimization, and integrating with various databases like MySQL, PostgreSQL, and MongoDB.
 Additionally, with 5 years of frontend experience using technologies such as React, HTML/CSS/JavaScript, I bring full-stack capabilities to deliver end-to-end solutions that ensure seamless user experiences.
 Passionate about clean code, performance optimization, and solving real-world problems, I aim to contribute to innovative teams building robust applications.`;
 
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
 
 export const EXPERIENCES = [
+  {
+    year: "2023 - Present",
+    role: "Software Engineer (Backend Focus)",
+    company: "PT Sinarmas Multiartha TBK - Danasaham",
+    description: "Merancang, mengembangkan, dan mengoptimasi fitur RESTful API serta layanan integrasi API eksternal untuk sistem perbankan. Bekerja dengan arsitektur microservices menggunakan Spring Cloud, Eureka, dan Kafka untuk handling event-driven. Mengelola database hybrid (MongoDB & PostgreSQL), caching dengan Redis, serta implementasi security dan CI/CD pipeline.",
+    technologies: ["Java", "Spring Boot", "Spring Cloud", "Spring Security", "Kafka", "Redis", "MongoDB", "PostgreSQL", "Jenkins", "Git", "Docker"],
+  },
+  {
+    year: "2026",
+    role: "Outsourcing Web Developer",
+    company: "CV DOIT Persada Indonesia",
+    description: "Bekerja sebagai pekerja lepas untuk jasa pembuatan website bagi client, mencakup pengembangan aplikasi web berbasis PHP CodeIgniter 4 dengan arsitektur HMVC, integrasi database, serta penyesuaian fitur sesuai kebutuhan bisnis client.",
+    technologies: ["PHP", "CodeIgniter 4", "HMVC", "MySQL", "Web Development", "Freelance"],
+  },
   {
     year: "2025 (Oct - Dec)",
     role: "Full-Stack Developer (Freelance)",
@@ -24,13 +40,6 @@ export const EXPERIENCES = [
     company: "PT. Obormas Mitra Elektrindo",
     description: "Mengembangkan dan mengelola integrasi sistem Java dengan perangkat biometric, termasuk fingerprint scanner, passport scanner, dan face recognition. Memastikan komunikasi yang reliable dan stabil antara hardware biometric dengan backend system.",
     technologies: ["Java", "System Integration", "Biometric Devices", "Hardware Communication", "REST API"],
-  },
-  {
-    year: "2023 - Present",
-    role: "Software Engineer (Backend Focus)",
-    company: "PT Sinarmas Multiartha TBK - Danasaham",
-    description: "Merancang, mengembangkan, dan mengoptimasi fitur RESTful API serta layanan integrasi API eksternal untuk sistem perbankan. Bekerja dengan arsitektur microservices menggunakan Spring Cloud, Eureka, dan Kafka untuk handling event-driven. Mengelola database hybrid (MongoDB & PostgreSQL), caching dengan Redis, serta implementasi security dan CI/CD pipeline.",
-    technologies: ["Java", "Spring Boot", "Spring Cloud", "Spring Security", "Kafka", "Redis", "MongoDB", "PostgreSQL", "Jenkins", "Git", "Docker"],
   },
   {
     year: "2022 - 2023",
@@ -48,8 +57,8 @@ export const EXPERIENCES = [
     projects: [
       "Sistem Informasi Madrasah Berbasis Web",
       "Sistem Penerimaan Peserta Didik Baru (PPDB) Online",
-      "Sistem Korespondensi Digital"
-    ]
+      "Sistem Korespondensi Digital",
+    ],
   },
 ];
 
@@ -60,23 +69,40 @@ export const PROJECTS = [
     description:
       "Backend sistem investasi saham perbankan dengan microservices, integrasi E-KYC, ISO 8583 transaksi banking, real-time WebSocket, dan SFTP. Deploy skalabel menggunakan Docker & Kubernetes.",
     technologies: ["Spring Boot", "Spring Cloud", "Eureka", "Redis", "MongoDB", "Kafka", "Jenkins", "ISO 8583", "E-KYC", "WebSocket", "SFTP", "Docker", "Kubernetes"],
-    link: "https://www.danasaham.co.id"
+    link: "https://www.danasaham.co.id",
   },
   {
-    title: "Kimia Farma Mobile - Backend Aplikasi Kesehatan",
-    image: project2,
+    title: "PT Baron - Sistem Belanja Bahan Dapur",
+    image: project7,
     description:
-      "Backend microservices untuk aplikasi mobile Kimia Farma, dengan integrasi real-time Kafka, caching Redis, dan CI/CD otomatis untuk performa tinggi.",
-    technologies: ["Java", "Spring Boot", "Spring Cloud", "Redis", "Kafka", "Docker", "Jenkins", "GitLab", "Kubernetes"],
-    link: "Internal Project - PT Harmonix Teknologi (Peentar)"
+      "Aplikasi procurement bahan dapur untuk membantu tim dapur membuat permintaan bahan, membandingkan penawaran supplier, membuat purchase order, dan memantau pengiriman sampai pesanan selesai.",
+    technologies: [
+      "Laravel 12 API",
+      "React Native",
+      "TypeScript",
+      "React Navigation",
+      "Zustand / Redux Toolkit",
+      "Axios",
+      "React Hook Form",
+      "Zod / Yup",
+      "AsyncStorage / MMKV",
+      "SafeAreaProvider",
+      "ESLint",
+      "Prettier",
+      "Environment Config",
+      "Absolute Import Alias",
+      "React.js Vite",
+      "Tailwind CSS",
+      "MySQL",
+      "Admin Web",
+    ],
   },
   {
-    title: "Tanhana - Platform Media Informasi Berita",
-    image: project4,
+    title: "Facebook Ads Management Tool",
+    image: project6,
     description:
-      "Membangun dan maintain website media berita nasional dengan fitur breaking news, artikel terbaru, berita utama, dan cerpen. Custom theme & plugin untuk optimasi konten dan SEO.",
-    technologies: ["WordPress", "PHP", "MySQL", "HTML", "CSS", "JavaScript"],
-    link: "https://tanhana.com"
+      "Web tool untuk mengelola kebutuhan Facebook Ads, termasuk proses login, integrasi data, dan automation berbasis cronjob agar aktivitas digital marketing lebih efisien dan terorganisir.",
+    technologies: ["PHP", "CodeIgniter 4", "HMVC", "MySQL", "Cronjob", "Automation", "Facebook Ads"],
   },
   {
     title: "Sistem Informasi Yayasan Manbatul Ulama",
@@ -84,7 +110,23 @@ export const PROJECTS = [
     description:
       "Full-stack development untuk website resmi yayasan: landing page modern, sistem manajemen informasi (program, donasi, kegiatan), dashboard admin, dan integrasi database.",
     technologies: ["React.js", "Tailwind CSS", "Laravel", "MySQL"],
-    link: "https://manbatululamaa.com" // jika sudah live full; jika masih dev, bisa diganti "Ongoing Project"
+    link: "https://manbatululamaa.com",
+  },
+  {
+    title: "Kimia Farma Mobile - Backend Aplikasi Kesehatan",
+    image: project2,
+    description:
+      "Backend microservices untuk aplikasi mobile Kimia Farma, dengan integrasi real-time Kafka, caching Redis, dan CI/CD otomatis untuk performa tinggi.",
+    technologies: ["Java", "Spring Boot", "Spring Cloud", "Redis", "Kafka", "Docker", "Jenkins", "GitLab", "Kubernetes"],
+    link: "Internal Project - PT Harmonix Teknologi (Peentar)",
+  },
+  {
+    title: "Tanhana - Platform Media Informasi Berita",
+    image: project4,
+    description:
+      "Membangun dan maintain website media berita nasional dengan fitur breaking news, artikel terbaru, berita utama, dan cerpen. Custom theme & plugin untuk optimasi konten dan SEO.",
+    technologies: ["WordPress", "PHP", "MySQL", "HTML", "CSS", "JavaScript"],
+    link: "https://tanhana.com",
   },
   {
     title: "Sistem Informasi Madrasah (PPDB Online & Korespondensi)",
