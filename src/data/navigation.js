@@ -1,10 +1,10 @@
 export const navItems = [
-  { href: "#hero", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#technologies", label: "Tech" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
+  { href: "#hero", label: "Beranda" },
+  { href: "#about", label: "Tentang" },
+  { href: "#technologies", label: "Teknologi" },
+  { href: "#experience", label: "Pengalaman" },
+  { href: "#projects", label: "Proyek" },
+  { href: "#contact", label: "Kontak" },
 ];
 
 export const socialLinks = [

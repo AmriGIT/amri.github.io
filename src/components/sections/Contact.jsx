@@ -1,12 +1,7 @@
 import { motion } from "framer-motion";
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
+import { useLanguage } from "../../hooks/useLanguage";
 import { CONTACT } from "../../data";
-
-const contactCards = [
-  { label: "Location", value: CONTACT.address, icon: <FaMapMarkerAlt className="text-xl" />, accent: "emerald" },
-  { label: "Phone", value: CONTACT.phoneNo, href: `tel:${CONTACT.phoneNo}`, icon: <FaPhone className="text-xl" />, accent: "amber" },
-  { label: "Email", value: CONTACT.email, href: `mailto:${CONTACT.email}`, icon: <FaEnvelope className="text-xl" />, accent: "sky" },
-];
 
 const accentClasses = {
   amber: "bg-amber-200/10 text-amber-100 hover:border-amber-200/30",
@@ -15,14 +10,21 @@ const accentClasses = {
 };
 
 const Contact = () => {
+  const { t } = useLanguage();
+  const contactCards = [
+    { label: t.contact.location, value: CONTACT.address, icon: <FaMapMarkerAlt className="text-xl" />, accent: "emerald" },
+    { label: t.contact.phone, value: CONTACT.phoneNo, href: `tel:${CONTACT.phoneNo}`, icon: <FaPhone className="text-xl" />, accent: "amber" },
+    { label: "Email", value: CONTACT.email, href: `mailto:${CONTACT.email}`, icon: <FaEnvelope className="text-xl" />, accent: "sky" },
+  ];
+
   return (
     <section id="contact" className="border-t border-white/10 py-20">
       <div className="mx-auto max-w-5xl">
         <div className="mb-10 max-w-3xl">
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-emerald-200">Let&apos;s connect</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">Contact</h2>
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-emerald-200">{t.sections.contactEyebrow}</p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">{t.sections.contactTitle}</h2>
           <p className="mt-4 text-base leading-8 text-zinc-400">
-            Jika Anda ingin mengembangkan proyek baru atau membutuhkan dukungan teknis, saya siap membantu.
+            {t.sections.contactIntro}
           </p>
         </div>
 
@@ -57,17 +59,17 @@ const Contact = () => {
         <div className="mt-8 rounded-lg border border-white/10 bg-white/[0.04] p-6 shadow-xl shadow-black/20 sm:p-8">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <h3 className="text-2xl font-semibold text-white">Ready to start your next project?</h3>
+              <h3 className="text-2xl font-semibold text-white">{t.contact.readyTitle}</h3>
               <p className="mt-4 max-w-2xl text-base leading-8 text-zinc-400">
-                Kirim email atau langsung panggil untuk diskusi cepat dan solusi teknis yang terukur.
+                {t.contact.readyText}
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
               <a href={`mailto:${CONTACT.email}`} className="inline-flex items-center justify-center rounded-lg bg-emerald-300 px-5 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-200 focus:ring-offset-2 focus:ring-offset-zinc-950">
-                Email Me
+                {t.contact.emailCta}
               </a>
               <a href={`tel:${CONTACT.phoneNo}`} className="inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition hover:border-amber-200/50 hover:bg-amber-200/10 hover:text-amber-100 focus:outline-none focus:ring-2 focus:ring-amber-200/40">
-                Call Me
+                {t.contact.callCta}
               </a>
             </div>
           </div>

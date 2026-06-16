@@ -1,15 +1,18 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "../../hooks/useLanguage";
 import { EXPERIENCES } from "../../data";
 
 const Experience = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="experience" className="border-t border-white/10 py-20">
       <div className="mx-auto max-w-7xl">
         <div className="mb-10 max-w-3xl">
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-emerald-200">Career journey</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">Experience</h2>
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-emerald-200">{t.sections.experienceEyebrow}</p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">{t.sections.experienceTitle}</h2>
           <p className="mt-4 text-base leading-8 text-zinc-400">
-            Roles and responsibilities I have taken while building reliable systems for production.
+            {t.sections.experienceIntro}
           </p>
         </div>
 

@@ -1,16 +1,19 @@
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { useLanguage } from "../../hooks/useLanguage";
 import { PROJECTS } from "../../data";
 
 const Projects = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="projects" className="border-t border-white/10 py-20">
       <div className="mx-auto max-w-7xl">
         <div className="mb-10 max-w-3xl">
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-emerald-200">Work examples</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">Projects</h2>
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-emerald-200">{t.sections.projectsEyebrow}</p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">{t.sections.projectsTitle}</h2>
           <p className="mt-4 text-base leading-8 text-zinc-400">
-            Projects that demonstrate the scale, complexity, and impact of my work.
+            {t.sections.projectsIntro}
           </p>
         </div>
 
@@ -44,11 +47,11 @@ const Projects = () => {
                           rel="noreferrer"
                           className="inline-flex w-fit items-center gap-2 rounded-lg bg-emerald-300/10 px-3 py-2 text-sm font-medium text-emerald-200 transition hover:bg-emerald-300/20 focus:outline-none focus:ring-2 focus:ring-emerald-300/40"
                         >
-                          Live <FaExternalLinkAlt className="text-xs" />
+                          {t.projectLabels.live} <FaExternalLinkAlt className="text-xs" />
                         </a>
                       ) : (
                         <span className="inline-flex w-fit rounded-lg bg-amber-200/10 px-3 py-2 text-sm font-medium text-amber-100">
-                          Internal
+                          {t.projectLabels.internal}
                         </span>
                       ))}
                   </div>

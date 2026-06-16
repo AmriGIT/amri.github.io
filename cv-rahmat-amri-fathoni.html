@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Rahmat Amri Fathoni</title>
+    <style>
+      :root {
+        --ink: #000;
+        --muted: #000;
+        --line: #dce5df;
+        --soft: #f4f7f5;
+        --accent: #000;
+        --accent-dark: #000;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #dfe7e2;
+        color: var(--ink);
+        font-family: "Times New Roman", Times, serif;
+        font-size: 12px;
+        line-height: 1.48;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        background: #fff;
+        padding: 18mm 16mm;
+      }
+
+      .header {
+        display: grid;
+        grid-template-columns: 1fr 39mm;
+        gap: 18mm;
+        align-items: start;
+        border-bottom: 2px solid var(--accent);
+        padding-bottom: 14px;
+      }
+
+      .photo {
+        width: 39mm;
+        height: 47mm;
+        object-fit: cover;
+        object-position: center top;
+        background: #eee;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        color: #000;
+        font-size: 27px;
+        line-height: 1.05;
+        letter-spacing: 0;
+        margin-bottom: 9px;
+      }
+
+      .role {
+        margin-bottom: 12px;
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      section {
+        margin-top: 15px;
+      }
+
+      h2 {
+        color: var(--accent-dark);
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 5px;
+        margin-bottom: 9px;
+      }
+
+      h3 {
+        color: var(--ink);
+        font-size: 13px;
+        line-height: 1.28;
+      }
+
+      .bio-row {
+        display: grid;
+        grid-template-columns: 45mm 5mm 1fr;
+        gap: 0;
+        align-items: baseline;
+        font-size: 16px;
+        line-height: 1.18;
+      }
+
+      .bio-label {
+        color: #000;
+        font-weight: 400;
+      }
+
+      .bio-separator {
+        color: #000;
+      }
+
+      .bio-value {
+        color: #000;
+      }
+
+      .bio-value a {
+        color: #000;
+        text-decoration: underline;
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-top: 3px;
+      }
+
+      .chip {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 3px 7px;
+        background: var(--soft);
+        color: #000;
+        font-size: 11px;
+      }
+
+      .item {
+        break-inside: avoid;
+      }
+
+      .item + .item {
+        margin-top: 11px;
+      }
+
+      .meta {
+        margin-top: 2px;
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      .description {
+        margin-top: 4px;
+        color: var(--ink);
+      }
+
+      .project {
+        break-inside: avoid;
+        border-left: 3px solid var(--line);
+        padding-left: 9px;
+      }
+
+      .projects-section {
+        break-before: page;
+        page-break-before: always;
+        padding-top: 10mm;
+        margin-top: 0;
+      }
+
+      .project + .project {
+        margin-top: 10px;
+      }
+
+      .project p {
+        margin-top: 3px;
+      }
+
+      .tech {
+        color: var(--muted);
+        font-size: 11px;
+      }
+
+      .date {
+        color: var(--muted);
+        font-size: 11px;
+        margin-top: 12px;
+        text-align: right;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .page {
+          width: auto;
+          min-height: auto;
+          margin: 0;
+          padding: 18mm 16mm;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <div>
+          <h1>Rahmat Amri Fathoni</h1>
+          <p class="role">Backend Java Developer / Full-Stack Developer</p>
+          <div class="bio-row">
+            <span class="bio-label">Education</span>
+            <span class="bio-separator">:</span>
+            <span class="bio-value">S1 Informatika</span>
+          </div>
+          <div class="bio-row">
+            <span class="bio-label">University</span>
+            <span class="bio-separator">:</span>
+            <span class="bio-value">STIMIK Amikom Surakarta</span>
+          </div>
+          <div class="bio-row">
+            <span class="bio-label">Birth Of Date</span>
+            <span class="bio-separator">:</span>
+            <span class="bio-value">Sukoharjo, 22 Januari 1994</span>
+          </div>
+          <div class="bio-row">
+            <span class="bio-label">Status</span>
+            <span class="bio-separator">:</span>
+            <span class="bio-value">Married</span>
+          </div>
+          <div class="bio-row">
+            <span class="bio-label">Phone</span>
+            <span class="bio-separator">:</span>
+            <span class="bio-value">+6287887661979</span>
+          </div>
+          <div class="bio-row">
+            <span class="bio-label">Email</span>
+            <span class="bio-separator">:</span>
+            <span class="bio-value"><a href="mailto:rahmatamri123@gmail.com">rahmatamri123@gmail.com</a></span>
+          </div>
+          <div class="bio-row">
+            <span class="bio-label">LinkedIn</span>
+            <span class="bio-separator">:</span>
+            <span class="bio-value">id.linkedin.com/in/rahmat-amri-fathoni-98a2b217a</span>
+          </div>
+          <div class="bio-row">
+            <span class="bio-label">GitHub / GitLab</span>
+            <span class="bio-separator">:</span>
+            <span class="bio-value">github.com/AmriGIT / gitlab.com/Amri93</span>
+          </div>
+        </div>
+        <img class="photo" src="src/assets/fotoku.png" alt="Foto Rahmat Amri Fathoni" />
+      </header>
+
+      <section>
+        <h2>Skills</h2>
+        <div class="skills">
+          <span class="chip">Java</span>
+          <span class="chip">Spring Boot</span>
+          <span class="chip">Spring Cloud</span>
+          <span class="chip">REST API</span>
+          <span class="chip">Microservices</span>
+          <span class="chip">Spring Security</span>
+          <span class="chip">Kafka</span>
+          <span class="chip">Redis</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Jenkins</span>
+          <span class="chip">MongoDB</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">PHP</span>
+          <span class="chip">Laravel</span>
+          <span class="chip">CodeIgniter</span>
+          <span class="chip">React.js</span>
+          <span class="chip">React Native</span>
+          <span class="chip">Tailwind CSS</span>
+          <span class="chip">Midtrans</span>
+          <span class="chip">Firebase</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Professional Experience</h2>
+        <div class="item">
+          <h3>Software Engineer (Fokus Backend) - PT Sinarmas Multiartha TBK / Danasaham</h3>
+          <p class="meta">2023 - Sekarang</p>
+          <p class="description">Merancang, mengembangkan, dan mengoptimasi RESTful API serta layanan integrasi API eksternal untuk sistem perbankan. Bekerja dengan arsitektur microservices menggunakan Spring Cloud, Eureka, dan Kafka, mengelola MongoDB dan PostgreSQL, caching Redis, security, CI/CD, serta deployment berbasis Docker.</p>
+        </div>
+        <div class="item">
+          <h3>Web Developer Outsourcing - CV DOIT Persada Indonesia</h3>
+          <p class="meta">2026</p>
+          <p class="description">Mengembangkan aplikasi web berbasis PHP CodeIgniter 4 dengan arsitektur HMVC, integrasi database, dan penyesuaian fitur sesuai kebutuhan bisnis klien.</p>
+        </div>
+        <div class="item">
+          <h3>Full-Stack Developer (Pekerja Lepas) - Yayasan Manbatul Ulama</h3>
+          <p class="meta">2025 (Okt - Des)</p>
+          <p class="description">Mengembangkan landing page dan sistem informasi yayasan dari awal, mencakup frontend responsif, backend management data, dashboard admin, pengelolaan konten, dan integrasi database.</p>
+        </div>
+        <div class="item">
+          <h3>Java Developer (Pekerja Lepas Remote) - PT. Obormas Mitra Elektrindo</h3>
+          <p class="meta">2025 (Feb - Apr)</p>
+          <p class="description">Mengembangkan integrasi sistem Java dengan perangkat biometric, termasuk fingerprint scanner, passport scanner, dan face recognition untuk komunikasi hardware yang stabil dengan backend system.</p>
+        </div>
+        <div class="item">
+          <h3>Backend Java Developer - PT Harmonix Teknologi Peentar</h3>
+          <p class="meta">2022 - 2023</p>
+          <p class="description">Membangun dan mengoptimasi RESTful API menggunakan Spring Boot, autentikasi JWT, optimasi database, integrasi Redis/Kafka, CI/CD Jenkins, GitLab, dan containerization Docker.</p>
+        </div>
+        <div class="item">
+          <h3>Fullstack Developer - MAN Sukoharjo, Jawa Tengah</h3>
+          <p class="meta">2016 - 2022</p>
+          <p class="description">Mengembangkan sistem informasi madrasah, PPDB online, sistem korespondensi digital, serta mengelola hosting, domain, maintenance website sekolah, dan administrasi dokumen digital.</p>
+        </div>
+      </section>
+
+      <section class="projects-section">
+        <h2>Projects</h2>
+        <div class="project">
+          <h3>Danasaham - Platform Investasi Saham</h3>
+          <p>Backend sistem investasi saham perbankan dengan microservices, integrasi E-KYC, ISO 8583 untuk transaksi banking, WebSocket real-time, dan SFTP. Deployment dibuat skalabel menggunakan Docker dan Kubernetes.</p>
+          <p class="tech">Spring Boot, Spring Cloud, Eureka, Redis, MongoDB, Kafka, Jenkins, ISO 8583, E-KYC, WebSocket, SFTP, Docker, Kubernetes.</p>
+        </div>
+        <div class="project">
+          <h3>PT Baron - Sistem Belanja Bahan Dapur</h3>
+          <p>Aplikasi pengadaan bahan dapur untuk membantu tim dapur membuat permintaan bahan, membandingkan penawaran supplier, membuat purchase order, dan memantau pengiriman sampai pesanan selesai.</p>
+          <p class="tech">Laravel 12 API, React Native, TypeScript, React Navigation, Zustand / Redux Toolkit, Axios, React Hook Form, Zod / Yup, AsyncStorage / MMKV, SafeAreaProvider, ESLint, Prettier, Environment Config, Absolute Import Alias, React.js Vite, Tailwind CSS, MySQL, Web Admin.</p>
+        </div>
+        <div class="project">
+          <h3>Wincos Warranty - Mobile App Dealer</h3>
+          <p>Pengembangan aplikasi mobile React Native untuk mendukung proses dealer, transaksi Super Dealer, garansi, dan pembayaran. Fokus kontribusi mencakup perubahan metode pembayaran Instant dan Bank Transfer, integrasi Midtrans Snap, flow cicilan dealer, refresh detail transaksi, responsive design untuk web dan mobile, penyesuaian UI tablet, serta stabilisasi build iOS terkait Firebase.</p>
+          <p class="tech">React Native 0.75, Expo Dev Client, React Navigation, Redux, Axios, Responsive Design, Firebase Messaging, Midtrans Snap Payment, EAS Build, Android, iOS.</p>
+        </div>
+        <div class="project">
+          <h3>Alat Manajemen Facebook Ads</h3>
+          <p>Aplikasi web untuk mengelola kebutuhan Facebook Ads, termasuk proses login, integrasi data, dan otomatisasi berbasis cronjob agar aktivitas digital marketing lebih efisien dan terorganisir.</p>
+          <p class="tech">PHP, CodeIgniter 4, HMVC, MySQL, Cronjob, Otomatisasi, Facebook Ads.</p>
+        </div>
+        <div class="project">
+          <h3>Sistem Informasi Yayasan Manbatul Ulama</h3>
+          <p>Pengembangan full-stack untuk website resmi yayasan: landing page modern, sistem manajemen informasi program, donasi, kegiatan, dashboard admin, dan integrasi database.</p>
+          <p class="tech">React.js, Tailwind CSS, Laravel, MySQL.</p>
+        </div>
+        <div class="project">
+          <h3>Kimia Farma Mobile - Backend Aplikasi Kesehatan</h3>
+          <p>Backend microservices untuk aplikasi mobile Kimia Farma, dengan integrasi real-time Kafka, caching Redis, dan CI/CD otomatis untuk performa tinggi.</p>
+          <p class="tech">Java, Spring Boot, Spring Cloud, Redis, Kafka, Docker, Jenkins, GitLab, Kubernetes.</p>
+        </div>
+        <div class="project">
+          <h3>Tanhana - Platform Media Informasi Berita</h3>
+          <p>Membangun dan merawat website media berita nasional dengan fitur breaking news, artikel terbaru, berita utama, dan cerpen. Tema dan plugin khusus digunakan untuk optimasi konten dan SEO.</p>
+          <p class="tech">WordPress, PHP, MySQL, HTML, CSS, JavaScript.</p>
+        </div>
+        <div class="project">
+          <h3>Sistem Informasi Madrasah (PPDB Online & Korespondensi)</h3>
+          <p>Pengembangan sistem web terintegrasi untuk madrasah: informasi sekolah, penerimaan siswa baru online (PPDB), dan manajemen korespondensi digital.</p>
+          <p class="tech">PHP, CodeIgniter, MySQL, WordPress, HTML, CSS, JavaScript.</p>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

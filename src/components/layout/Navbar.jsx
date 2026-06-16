@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { FaBars, FaGithub, FaGitlab, FaInstagram, FaLinkedin, FaMoon, FaSun, FaTimes } from "react-icons/fa";
 import { ThemeContext } from "../../context/ThemeContext";
-import { navItems, socialLinks } from "../../data";
-import rafLogo from "../../assets/raf-logo.svg";
+import { socialLinks } from "../../data";
+import { useLanguage } from "../../hooks/useLanguage";
+import logo from "../../assets/logo.png";
 
 const socialIcons = {
   github: <FaGithub />,
@@ -14,6 +15,8 @@ const socialIcons = {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
+  const { t, toggleLanguage } = useLanguage();
+  const navItems = t.navItems;
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
 
   useEffect(() => {
@@ -58,7 +61,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", updateActiveSection);
     };
-  }, []);
+  }, [navItems]);
 
   const handleNavClick = (event, href) => {
     event.preventDefault();
@@ -102,7 +105,7 @@ const Navbar = () => {
   const renderThemeToggle = (compact = false) => (
     <button
       type="button"
-      aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+      aria-label={isDarkMode ? t.theme.toLight : t.theme.toDark}
       aria-pressed={!isDarkMode}
       onClick={toggleTheme}
       className={`theme-toggle inline-flex items-center rounded-lg border border-white/10 bg-white/[0.03] text-zinc-200 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-emerald-300/40 ${
@@ -110,7 +113,20 @@ const Navbar = () => {
       }`}
     >
       {isDarkMode ? <FaSun /> : <FaMoon />}
-      {!compact && <span className="text-sm font-medium">{isDarkMode ? "Light" : "Dark"}</span>}
+      {!compact && <span className="text-sm font-medium">{isDarkMode ? t.theme.light : t.theme.dark}</span>}
+    </button>
+  );
+
+  const renderLanguageToggle = (compact = false) => (
+    <button
+      type="button"
+      aria-label="Ganti bahasa"
+      onClick={toggleLanguage}
+      className={`inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-sm font-semibold text-zinc-200 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-emerald-300/40 ${
+        compact ? "h-10 w-10" : "h-10 px-3"
+      }`}
+    >
+      {t.languageLabel}
     </button>
   );
 
@@ -120,10 +136,10 @@ const Navbar = () => {
         <div className="flex items-center justify-between gap-4">
           <a href="#hero" className="inline-flex min-w-0 items-center gap-3" onClick={(event) => handleNavClick(event, "#hero")}>
             <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-lg bg-emerald-400/10 ring-1 ring-emerald-300/20">
-              <img src={rafLogo} alt="RAF logo" className="h-full w-full object-cover" />
+              <img src={logo} alt="Rahmat Amri logo" className="h-full w-full object-contain" />
             </div>
             <div className="min-w-0 space-y-1 text-left">
-              <p className="text-[11px] uppercase tracking-[0.22em] text-emerald-200">Portfolio</p>
+              <p className="text-[11px] uppercase tracking-[0.22em] text-emerald-200">{t.portfolio}</p>
               <h1 className="truncate text-base font-semibold text-white sm:text-lg">Rahmat Amri</h1>
             </div>
           </a>
@@ -150,14 +166,16 @@ const Navbar = () => {
                 {socialIcons[item.icon]}
               </a>
             ))}
+            {renderLanguageToggle()}
             {renderThemeToggle()}
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
+            {renderLanguageToggle(true)}
             {renderThemeToggle(true)}
             <button
               type="button"
-              aria-label="Toggle menu"
+              aria-label="Buka atau tutup menu"
               aria-expanded={isOpen}
               onClick={() => setIsOpen((value) => !value)}
               className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-zinc-200 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-emerald-300/40"
