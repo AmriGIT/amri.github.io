@@ -68,12 +68,14 @@ const Technologies = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="technologies" className="border-t border-white/10 py-20">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-10 max-w-3xl">
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-emerald-200">{t.sections.techEyebrow}</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">{t.sections.techTitle}</h2>
-          <p className="mt-4 text-base leading-8 text-zinc-400">
+    <section id="technologies" className="page-section">
+      <div className="section-inner">
+        <div className="section-heading">
+          <div>
+            <p className="section-eyebrow">{t.sections.techEyebrow}</p>
+            <h2 className="section-title">{t.sections.techTitle}</h2>
+          </div>
+          <p className="section-intro">
             {t.sections.techIntro}
           </p>
         </div>

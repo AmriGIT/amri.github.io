@@ -6,12 +6,14 @@ const Experience = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="experience" className="border-t border-white/10 py-20">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-10 max-w-3xl">
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-emerald-200">{t.sections.experienceEyebrow}</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">{t.sections.experienceTitle}</h2>
-          <p className="mt-4 text-base leading-8 text-zinc-400">
+    <section id="experience" className="page-section">
+      <div className="section-inner">
+        <div className="section-heading">
+          <div>
+            <p className="section-eyebrow">{t.sections.experienceEyebrow}</p>
+            <h2 className="section-title">{t.sections.experienceTitle}</h2>
+          </div>
+          <p className="section-intro">
             {t.sections.experienceIntro}
           </p>
         </div>

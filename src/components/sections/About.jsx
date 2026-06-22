@@ -13,17 +13,19 @@ const About = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="border-t border-white/10 py-20">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-10 max-w-3xl">
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-emerald-200">{t.sections.aboutEyebrow}</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">{t.sections.aboutTitle}</h2>
-          <p className="mt-4 text-base leading-8 text-zinc-400">
+    <section id="about" className="page-section">
+      <div className="section-inner">
+        <div className="section-heading">
+          <div>
+            <p className="section-eyebrow">{t.sections.aboutEyebrow}</p>
+            <h2 className="section-title">{t.sections.aboutTitle}</h2>
+          </div>
+          <p className="section-intro">
             {t.sections.aboutIntro}
           </p>
         </div>
 
-        <div className="grid gap-12 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
+        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <motion.div whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -60 }} transition={{ duration: 0.8 }}>
             <div className="overflow-hidden rounded-lg border border-white/10 bg-white/[0.04] p-3 shadow-2xl shadow-black/30 ring-1 ring-white/10 backdrop-blur">
               <img src={aboutImg} alt="Tentang Rahmat Amri" className="aspect-[4/3] h-full w-full rounded-md object-cover" />

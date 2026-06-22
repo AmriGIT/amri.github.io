@@ -25,8 +25,8 @@ const Hero = () => {
   ];
 
   return (
-    <section id="hero" className="pb-20 pt-14 lg:pb-24 lg:pt-20">
-      <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_.95fr]">
+    <section id="hero" className="hero-section">
+      <div className="grid min-h-[calc(100vh-8rem)] items-center gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(360px,.95fr)]">
         <div>
           <motion.span variants={fadeIn(0)} initial="hidden" animate="visible" className="inline-flex rounded-md border border-emerald-300/20 bg-emerald-300/10 px-3 py-2 text-xs font-medium uppercase tracking-[0.18em] text-emerald-200">
             {t.hero.badge}
@@ -36,7 +36,7 @@ const Hero = () => {
             Rahmat Amri Fathoni
           </motion.h1>
 
-          <motion.div variants={fadeIn(0.24)} initial="hidden" animate="visible" className="mt-6 max-w-3xl space-y-4 text-base leading-8 text-zinc-300 sm:text-lg">
+          <motion.div variants={fadeIn(0.24)} initial="hidden" animate="visible" className="mt-6 max-w-3xl space-y-4 text-base leading-8 text-zinc-300 sm:text-lg sm:leading-9">
             {heroParagraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
@@ -51,7 +51,7 @@ const Hero = () => {
             </a>
           </motion.div>
 
-          <motion.div variants={fadeIn(0.48)} initial="hidden" animate="visible" className="mt-10 grid gap-3 sm:grid-cols-3">
+          <motion.div variants={fadeIn(0.48)} initial="hidden" animate="visible" className="mt-10 grid gap-3 sm:grid-cols-3 lg:max-w-3xl">
             {stats.map((item) => (
               <div key={item.label} className="rounded-lg border border-white/10 bg-white/[0.04] p-4 shadow-xl shadow-black/20 backdrop-blur transition hover:-translate-y-1 hover:border-emerald-300/30 hover:bg-white/[0.06]">
                 <p className="text-2xl font-semibold text-white">{item.value}</p>
@@ -61,9 +61,9 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        <motion.div variants={fadeIn(0.24)} initial="hidden" animate="visible" className="lg:justify-self-end">
+        <motion.div variants={fadeIn(0.24)} initial="hidden" animate="visible" className="w-full lg:justify-self-end">
           <div className="overflow-hidden rounded-lg border border-white/10 bg-white/[0.04] shadow-2xl shadow-black/40 ring-1 ring-white/10 backdrop-blur">
-            <img src={profilPic} alt="Rahmat Amri Fathoni" className="h-[420px] w-full object-cover sm:h-[520px]" />
+            <img src={profilPic} alt="Rahmat Amri Fathoni" className="h-[380px] w-full object-cover sm:h-[520px] lg:h-[560px]" />
             <div className="grid gap-3 border-t border-white/10 bg-zinc-950/90 p-5 backdrop-blur sm:grid-cols-2">
               <div>
                 <p className="text-xs uppercase tracking-[0.18em] text-emerald-200">Fullstack</p>

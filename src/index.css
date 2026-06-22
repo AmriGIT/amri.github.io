@@ -6,6 +6,10 @@
 :root {
   color-scheme: dark light;
   font-family: "Inter", sans-serif;
+  --page-max-width: 80rem;
+  --section-spacing: clamp(4.5rem, 8vw, 7rem);
+  --section-header-gap: clamp(2rem, 4vw, 3.5rem);
+  --section-border: rgba(148, 163, 184, 0.14);
 }
 
 html {
@@ -23,6 +27,10 @@ body {
   box-sizing: border-box;
 }
 
+img {
+  display: block;
+}
+
 ::selection {
   background: #6ee7b7;
   color: #09090b;
@@ -37,13 +45,114 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #6ee7b7;
+  outline-offset: 3px;
+}
+
+main:focus {
+  outline: none;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 60;
+  transform: translateY(-150%);
+  border-radius: 0.5rem;
+  background: #6ee7b7;
+  color: #062019;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+  transition: transform 160ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 .portfolio-shell {
   transition: background-color 200ms ease, color 200ms ease;
+}
+
+.section-inner {
+  margin-inline: auto;
+  max-width: var(--page-max-width);
+}
+
+.page-section {
+  border-top: 1px solid var(--section-border);
+  padding-block: var(--section-spacing);
+}
+
+.section-heading {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: var(--section-header-gap);
+  max-width: 56rem;
+}
+
+.section-eyebrow {
+  color: #a7f3d0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.section-title {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 650;
+  letter-spacing: 0;
+  line-height: 1.12;
+  margin-top: 0.75rem;
+}
+
+.section-intro {
+  color: #a7adba;
+  font-size: 1rem;
+  line-height: 1.9;
+  max-width: 42rem;
+}
+
+.hero-section {
+  padding-bottom: clamp(5rem, 8vw, 7rem);
+  padding-top: clamp(3.5rem, 7vw, 6rem);
+}
+
+@media (min-width: 640px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-heading {
+    align-items: end;
+    grid-template-columns: minmax(0, 0.9fr) minmax(20rem, 1.1fr);
+    max-width: none;
+  }
+
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .section-intro {
+    justify-self: end;
+  }
 }
 
 .theme-dark {
   background: #07080d !important;
   color: #e7e9ee !important;
+  --section-border: rgba(148, 163, 184, 0.12);
 }
 
 .theme-dark .portfolio-bg {
@@ -107,6 +216,11 @@ button {
   color: #a7f3d0 !important;
 }
 
+.theme-dark .bg-emerald-300 {
+  background-color: #10b981 !important;
+  color: #ffffff !important;
+}
+
 .theme-dark .shadow-black\/20,
 .theme-dark .shadow-black\/30,
 .theme-dark .shadow-black\/40 {
@@ -128,6 +242,7 @@ button {
 .theme-light {
   background: #f8fafc !important;
   color: #27272a !important;
+  --section-border: rgba(15, 23, 42, 0.12);
 }
 
 .theme-light .portfolio-bg {
@@ -184,6 +299,18 @@ button {
   color: #047857 !important;
 }
 
+.theme-light .section-eyebrow {
+  color: #047857;
+}
+
+.theme-light .section-title {
+  color: #18181b;
+}
+
+.theme-light .section-intro {
+  color: #52525b;
+}
+
 .theme-light .text-amber-100,
 .theme-light .text-amber-200 {
   color: #92400e !important;
@@ -231,4 +358,19 @@ button {
 
 .theme-light .hover\:text-white:hover {
   color: #09090b !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
