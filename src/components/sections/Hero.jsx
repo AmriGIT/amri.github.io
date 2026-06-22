@@ -53,7 +53,7 @@ const Hero = () => {
 
           <motion.div variants={fadeIn(0.48)} initial="hidden" animate="visible" className="mt-10 grid gap-3 sm:grid-cols-3">
             {stats.map((item) => (
-              <div key={item.label} className="rounded-lg border border-white/10 bg-white/[0.04] p-4">
+              <div key={item.label} className="rounded-lg border border-white/10 bg-white/[0.04] p-4 shadow-xl shadow-black/20 backdrop-blur transition hover:-translate-y-1 hover:border-emerald-300/30 hover:bg-white/[0.06]">
                 <p className="text-2xl font-semibold text-white">{item.value}</p>
                 <p className="mt-1 text-sm leading-6 text-zinc-400">{item.label}</p>
               </div>
@@ -62,9 +62,9 @@ const Hero = () => {
         </div>
 
         <motion.div variants={fadeIn(0.24)} initial="hidden" animate="visible" className="lg:justify-self-end">
-          <div className="overflow-hidden rounded-lg border border-white/10 bg-white/[0.04] shadow-2xl shadow-black/40">
+          <div className="overflow-hidden rounded-lg border border-white/10 bg-white/[0.04] shadow-2xl shadow-black/40 ring-1 ring-white/10 backdrop-blur">
             <img src={profilPic} alt="Rahmat Amri Fathoni" className="h-[420px] w-full object-cover sm:h-[520px]" />
-            <div className="grid gap-3 border-t border-white/10 bg-zinc-950/90 p-5 sm:grid-cols-2">
+            <div className="grid gap-3 border-t border-white/10 bg-zinc-950/90 p-5 backdrop-blur sm:grid-cols-2">
               <div>
                 <p className="text-xs uppercase tracking-[0.18em] text-emerald-200">Fullstack</p>
                 <p className="mt-2 text-sm font-medium text-white">{t.hero.fullstackPeriod}</p>

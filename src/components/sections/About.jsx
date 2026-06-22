@@ -25,7 +25,7 @@ const About = () => {
 
         <div className="grid gap-12 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
           <motion.div whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -60 }} transition={{ duration: 0.8 }}>
-            <div className="overflow-hidden rounded-lg border border-white/10 bg-white/[0.04] p-3 shadow-2xl shadow-black/30">
+            <div className="overflow-hidden rounded-lg border border-white/10 bg-white/[0.04] p-3 shadow-2xl shadow-black/30 ring-1 ring-white/10 backdrop-blur">
               <img src={aboutImg} alt="Tentang Rahmat Amri" className="aspect-[4/3] h-full w-full rounded-md object-cover" />
             </div>
           </motion.div>
@@ -34,7 +34,7 @@ const About = () => {
             <p className="text-base leading-8 text-zinc-300">{t.sections.aboutText}</p>
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
               {strengths.map((item) => (
-                <div key={item.label} className={`rounded-lg border border-white/10 bg-white/[0.04] p-5 transition hover:-translate-y-1 ${item.accent}`}>
+                <div key={item.label} className={`rounded-lg border border-white/10 bg-white/[0.04] p-5 shadow-xl shadow-black/20 backdrop-blur transition hover:-translate-y-1 hover:bg-white/[0.06] ${item.accent}`}>
                   <p className={`text-xs uppercase tracking-[0.18em] ${item.accent.split(" ")[0]}`}>{item.label}</p>
                   <p className="mt-4 text-lg font-semibold text-white">{item.value}</p>
                 </div>

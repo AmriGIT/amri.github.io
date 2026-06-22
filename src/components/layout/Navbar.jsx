@@ -108,7 +108,7 @@ const Navbar = () => {
       aria-label={isDarkMode ? t.theme.toLight : t.theme.toDark}
       aria-pressed={!isDarkMode}
       onClick={toggleTheme}
-      className={`theme-toggle inline-flex items-center rounded-lg border border-white/10 bg-white/[0.03] text-zinc-200 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-emerald-300/40 ${
+      className={`theme-toggle inline-flex items-center rounded-lg border border-white/10 bg-white/[0.03] text-zinc-200 shadow-sm shadow-black/20 transition hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-300/40 ${
         compact ? "h-10 w-10 justify-center" : "h-10 gap-2 px-3"
       }`}
     >
@@ -122,7 +122,7 @@ const Navbar = () => {
       type="button"
       aria-label="Ganti bahasa"
       onClick={toggleLanguage}
-      className={`inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-sm font-semibold text-zinc-200 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-emerald-300/40 ${
+      className={`inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-sm font-semibold text-zinc-200 shadow-sm shadow-black/20 transition hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-300/40 ${
         compact ? "h-10 w-10" : "h-10 px-3"
       }`}
     >
@@ -144,7 +144,7 @@ const Navbar = () => {
             </div>
           </a>
 
-          <nav className="hidden items-center rounded-lg border border-white/10 bg-white/[0.03] p-1 text-sm text-zinc-300 lg:flex">
+          <nav className="hidden items-center rounded-lg border border-white/10 bg-white/[0.03] p-1 text-sm text-zinc-300 shadow-sm shadow-black/20 lg:flex">
             {navItems.map((item) => (
               <a key={item.href} href={item.href} aria-current={activeSection === item.href.replace("#", "") ? "page" : undefined} onClick={(event) => handleNavClick(event, item.href)} className={getNavLinkClassName(item.href)}>
                 {item.label}
@@ -178,7 +178,7 @@ const Navbar = () => {
               aria-label="Buka atau tutup menu"
               aria-expanded={isOpen}
               onClick={() => setIsOpen((value) => !value)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-zinc-200 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-emerald-300/40"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-zinc-200 shadow-sm shadow-black/20 transition hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-300/40"
             >
               {isOpen ? <FaTimes /> : <FaBars />}
             </button>
@@ -186,7 +186,7 @@ const Navbar = () => {
         </div>
 
         {isOpen && (
-          <div className="mt-3 max-h-[calc(100vh-5.5rem)] overflow-y-auto rounded-lg border border-white/10 bg-zinc-900/95 p-3 shadow-2xl lg:hidden">
+          <div className="mt-3 max-h-[calc(100vh-5.5rem)] overflow-y-auto rounded-lg border border-white/10 bg-zinc-900/95 p-3 shadow-2xl shadow-black/40 ring-1 ring-white/10 backdrop-blur lg:hidden">
             <nav className="grid gap-1 text-sm text-zinc-200">
               {navItems.map((item) => (
                 <a key={item.href} href={item.href} aria-current={activeSection === item.href.replace("#", "") ? "page" : undefined} onClick={(event) => handleNavClick(event, item.href)} className={getMobileNavLinkClassName(item.href)}>

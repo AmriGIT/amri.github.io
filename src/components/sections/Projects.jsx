@@ -27,9 +27,9 @@ const Projects = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 36 }}
                 transition={{ duration: 0.7, delay: index * 0.08 }}
-                className="group overflow-hidden rounded-lg border border-white/10 bg-white/[0.04] shadow-xl shadow-black/20 transition hover:-translate-y-1 hover:border-emerald-300/30 hover:bg-white/[0.06]"
+                className="group overflow-hidden rounded-lg border border-white/10 bg-white/[0.04] shadow-xl shadow-black/20 backdrop-blur transition hover:-translate-y-1 hover:border-emerald-300/30 hover:bg-white/[0.06] hover:shadow-2xl"
               >
-                <div className="overflow-hidden border-b border-white/10">
+                <div className="overflow-hidden border-b border-white/10 bg-zinc-950/60">
                   <img
                     src={project.image || "https://via.placeholder.com/600x400?text=Project+Image"}
                     alt={project.title}
@@ -58,7 +58,7 @@ const Projects = () => {
                   <p className="mt-4 text-base leading-8 text-zinc-300">{project.description}</p>
                   <div className="mt-6 flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
-                      <span key={tech} className="rounded-md bg-zinc-950/50 px-3 py-1.5 text-sm text-zinc-300 ring-1 ring-white/10">
+                      <span key={tech} className="rounded-md bg-zinc-950/50 px-3 py-1.5 text-sm text-zinc-300 shadow-sm shadow-black/20 ring-1 ring-white/10">
                         {tech}
                       </span>
                     ))}

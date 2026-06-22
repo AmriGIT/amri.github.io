@@ -6,6 +6,7 @@ import project5 from "../assets/projects/project-5.png";
 import project6 from "../assets/projects/project-6.png";
 import project7 from "../assets/projects/project-7.png";
 import project8 from "../assets/projects/project-8.png";
+import project9 from "../assets/projects/project-9.png";
 
 export const HERO_CONTENT = `Saya adalah Backend Java Developer yang berfokus pada Spring Boot, dengan pengalaman profesional {{BACKEND_EXPERIENCE}} dalam membangun sistem backend yang aman, stabil, dan mudah dikembangkan. Saya terbiasa merancang RESTful API, microservices, optimasi database, serta integrasi dengan MySQL, PostgreSQL, dan MongoDB.
 Selain backend, saya juga memiliki pengalaman frontend menggunakan React, HTML, CSS, dan JavaScript, sehingga dapat membantu membangun solusi end-to-end dari sisi tampilan sampai layanan backend.
@@ -71,6 +72,14 @@ export const PROJECTS = [
       "Backend sistem investasi saham perbankan dengan microservices, integrasi E-KYC, ISO 8583 untuk transaksi banking, WebSocket real-time, dan SFTP. Deployment dibuat skalabel menggunakan Docker dan Kubernetes.",
     technologies: ["Spring Boot", "Spring Cloud", "Eureka", "Redis", "MongoDB", "Kafka", "Jenkins", "ISO 8583", "E-KYC", "WebSocket", "SFTP", "Docker", "Kubernetes"],
     link: "https://www.danasaham.co.id",
+  },
+  {
+    title: "PT Mitra Graha Andalan - ERP Pembayaran IPL & Air",
+    image: project9,
+    description:
+      "Sistem ERP internal untuk mengelola operasional properti, tenant, unit, meter air, invoice IPL dan air, serta monitoring pembayaran dan tunggakan. Pembayaran didukung melalui kas/cash manual dan integrasi payment gateway Xendit.",
+    technologies: ["ERP", "Billing IPL", "Meter Air", "Invoice Management", "Cash Payment", "Xendit", "Payment Gateway", "Dashboard", "Tenant Management", "Unit Management"],
+    link: "Proyek Internal - PT Mitra Graha Andalan",
   },
   {
     title: "PT Baron - Sistem Belanja Bahan Dapur",

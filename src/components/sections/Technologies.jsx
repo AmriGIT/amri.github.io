@@ -23,6 +23,11 @@ const technologies = [
     description: "Frontend interaktif",
   },
   {
+    label: "React Native",
+    icon: <RiReactjsLine className="text-6xl text-sky-400" />,
+    description: "Aplikasi mobile Android dan iOS",
+  },
+  {
     label: "Node.js",
     icon: <FaNodeJs className="text-6xl text-green-500" />,
     description: "JavaScript sisi server",
@@ -78,9 +83,9 @@ const Technologies = () => {
             <motion.div
               key={item.label}
               whileHover={{ y: -4 }}
-              className="group flex items-center gap-5 rounded-lg border border-white/10 bg-white/[0.04] p-5 shadow-xl shadow-black/20 transition hover:border-emerald-300/30 hover:bg-white/[0.06]"
+              className="group flex items-center gap-5 rounded-lg border border-white/10 bg-white/[0.04] p-5 shadow-xl shadow-black/20 backdrop-blur transition hover:border-emerald-300/30 hover:bg-white/[0.06] hover:shadow-2xl"
             >
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg bg-zinc-950/60 transition group-hover:scale-105">
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-lg bg-zinc-950/60 ring-1 ring-white/10 transition group-hover:scale-105">
                 {item.icon}
               </div>
               <div>

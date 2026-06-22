@@ -44,7 +44,7 @@ const Contact = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 20 }}
                 transition={{ duration: 0.6 + index * 0.2 }}
-                className={`rounded-lg border border-white/10 bg-white/[0.04] p-5 shadow-xl shadow-black/20 transition hover:-translate-y-1 ${accentClasses[item.accent]}`}
+                className={`rounded-lg border border-white/10 bg-white/[0.04] p-5 shadow-xl shadow-black/20 backdrop-blur transition hover:-translate-y-1 hover:bg-white/[0.06] ${accentClasses[item.accent]}`}
               >
                 <div className={`mb-4 flex h-12 w-12 items-center justify-center rounded-lg ${accentClasses[item.accent]}`}>
                   {item.icon}
@@ -56,7 +56,7 @@ const Contact = () => {
           })}
         </div>
 
-        <div className="mt-8 rounded-lg border border-white/10 bg-white/[0.04] p-6 shadow-xl shadow-black/20 sm:p-8">
+        <div className="mt-8 rounded-lg border border-white/10 bg-white/[0.04] p-6 shadow-xl shadow-black/20 ring-1 ring-white/10 backdrop-blur sm:p-8">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <h3 className="text-2xl font-semibold text-white">{t.contact.readyTitle}</h3>
